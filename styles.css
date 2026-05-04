@@ -1,0 +1,143 @@
+:root {
+  --orange: #ff7a00;
+  --orange-soft: #ff9f45;
+  --black: #0f0f0f;
+  --black-soft: #1f1f1f;
+  --text: #f5f5f5;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
+  background: radial-gradient(circle at top right, #2d1a00, var(--black));
+  color: var(--text);
+  min-height: 100vh;
+}
+
+.app-shell {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 1.5rem;
+}
+
+.topbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1.25rem;
+}
+
+h1 {
+  margin: 0;
+  color: var(--orange);
+}
+
+.card {
+  background: linear-gradient(155deg, rgba(255, 122, 0, 0.14), rgba(10, 10, 10, 0.95));
+  border: 1px solid rgba(255, 122, 0, 0.33);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 12px 22px rgba(0, 0, 0, 0.3);
+}
+
+.auth-card {
+  max-width: 460px;
+  margin: 4rem auto 0;
+}
+
+label {
+  display: block;
+  font-size: 0.95rem;
+  margin-bottom: 0.8rem;
+}
+
+input {
+  width: 100%;
+  margin-top: 0.35rem;
+  border: 1px solid #3f3f3f;
+  background: var(--black-soft);
+  color: var(--text);
+  border-radius: 10px;
+  padding: 0.75rem;
+}
+
+.primary-btn,
+.ghost-btn {
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1rem;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.primary-btn {
+  background: var(--orange);
+  color: #111;
+}
+
+.ghost-btn {
+  background: transparent;
+  color: var(--orange-soft);
+  border: 1px solid var(--orange-soft);
+}
+
+.hero h2 {
+  margin: 0.35rem 0;
+}
+
+.tag {
+  color: var(--orange-soft);
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.video-placeholder {
+  margin: 0.5rem 0;
+  border-radius: 12px;
+  background: #1a1a1a;
+  border: 1px solid #373737;
+  display: grid;
+  place-content: center;
+  height: 160px;
+  font-size: 2rem;
+  color: var(--orange);
+}
+
+#commentForm {
+  display: flex;
+  gap: 0.65rem;
+}
+
+#commentList {
+  list-style: none;
+  padding: 0;
+}
+
+#commentList li {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 10px;
+  padding: 0.65rem;
+  margin-top: 0.55rem;
+}
+
+.ai-output {
+  min-height: 2.2rem;
+  color: var(--orange-soft);
+}
+
+.hidden {
+  display: none;
+}
