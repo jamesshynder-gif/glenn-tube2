@@ -10,16 +10,13 @@
   <div class="app-shell">
     <header class="topbar">
       <h1>🔥 Glenn Tube</h1>
-      <div class="topbar-actions">
-        <button id="googleSignInBtn" class="ghost-btn">Sign in with Google</button>
-        <button id="emailSignOutBtn" class="ghost-btn hidden">Log out</button>
-      </div>
+      <button id="logoutBtn" class="ghost-btn hidden">Log out</button>
     </header>
 
     <main>
       <section id="authSection" class="card auth-card">
-        <h2>Create your account / Sign in</h2>
-        <p>Use email/password or Google to enter Glenn Tube.</p>
+        <h2>Create your account</h2>
+        <p>Sign in with your email to start posting, commenting, and vibing.</p>
         <form id="authForm">
           <label>Email
             <input type="email" id="emailInput" placeholder="you@example.com" required />
@@ -39,37 +36,33 @@
         </div>
 
         <div class="grid">
-          <article class="card uploader-card">
-            <h3>Upload a video</h3>
-            <form id="uploadForm">
-              <input id="titleInput" type="text" maxlength="80" placeholder="Video title" required />
-              <textarea id="descriptionInput" maxlength="300" placeholder="Description"></textarea>
-              <input id="videoInput" type="file" accept="video/*" required />
-              <button class="primary-btn" type="submit">Upload</button>
-            </form>
-            <p id="uploadStatus" class="muted"></p>
+          <article class="card video-card">
+            <h3>Featured Video: Orange & Black Aesthetic Loop</h3>
+            <div class="video-placeholder">▶</div>
+            <p>A fake video tile with real community features below.</p>
+            <button id="likeBtn" class="primary-btn">🧡 Like <span id="likeCount">0</span></button>
           </article>
 
           <article class="card ai-card">
-            <h3>AI Assistant (Gemini API)</h3>
-            <p>Generate a title + concept for your next video.</p>
-            <form id="aiForm">
-              <input id="aiPrompt" type="text" placeholder="Example: spooky snack review" required />
-              <button id="aiBtn" class="ghost-btn" type="submit">Generate</button>
-            </form>
+            <h3>AI Idea Generator</h3>
+            <p>Need a video idea? Click for an instantly sus concept.</p>
+            <button id="aiBtn" class="ghost-btn">Generate AI Idea</button>
             <p id="aiOutput" class="ai-output"></p>
           </article>
         </div>
 
-        <section class="card feed-card">
-          <h3>Video Feed</h3>
-          <p class="muted">Anyone can view these uploads.</p>
-          <div id="videoFeed" class="video-feed"></div>
+        <section class="card comments-card">
+          <h3>Comments</h3>
+          <form id="commentForm">
+            <input type="text" id="commentInput" maxlength="200" placeholder="Drop a comment..." required />
+            <button class="primary-btn" type="submit">Post</button>
+          </form>
+          <ul id="commentList"></ul>
         </section>
       </section>
     </main>
   </div>
 
-  <script type="module" src="app.js"></script>
+  <script src="app.js"></script>
 </body>
 </html>
