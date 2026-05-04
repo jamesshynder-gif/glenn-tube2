@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glenn Tube</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <h1>🔥 Glenn Tube</h1>
+      <button id="logoutBtn" class="ghost-btn hidden">Log out</button>
+    </header>
+
+    <main>
+      <section id="authSection" class="card auth-card">
+        <h2>Create your account</h2>
+        <p>Sign in with your email to start posting, commenting, and vibing.</p>
+        <form id="authForm">
+          <label>Email
+            <input type="email" id="emailInput" placeholder="you@example.com" required />
+          </label>
+          <label>Password
+            <input type="password" id="passwordInput" placeholder="••••••••" minlength="6" required />
+          </label>
+          <button type="submit" class="primary-btn">Sign In / Create Account</button>
+        </form>
+      </section>
+
+      <section id="homeSection" class="hidden">
+        <div class="hero card">
+          <p class="tag">Welcome to the timeline</p>
+          <h2>The more sus the better.</h2>
+          <p id="welcomeText"></p>
+        </div>
+
+        <div class="grid">
+          <article class="card video-card">
+            <h3>Featured Video: Orange & Black Aesthetic Loop</h3>
+            <div class="video-placeholder">▶</div>
+            <p>A fake video tile with real community features below.</p>
+            <button id="likeBtn" class="primary-btn">🧡 Like <span id="likeCount">0</span></button>
+          </article>
+
+          <article class="card ai-card">
+            <h3>AI Idea Generator</h3>
+            <p>Need a video idea? Click for an instantly sus concept.</p>
+            <button id="aiBtn" class="ghost-btn">Generate AI Idea</button>
+            <p id="aiOutput" class="ai-output"></p>
+          </article>
+        </div>
+
+        <section class="card comments-card">
+          <h3>Comments</h3>
+          <form id="commentForm">
+            <input type="text" id="commentInput" maxlength="200" placeholder="Drop a comment..." required />
+            <button class="primary-btn" type="submit">Post</button>
+          </form>
+          <ul id="commentList"></ul>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
