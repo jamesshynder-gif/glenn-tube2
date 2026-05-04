@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Glenn Tube</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app-shell">
+    <header class="topbar">
+      <h1>🔥 Glenn Tube</h1>
+      <div class="topbar-actions">
+        <button id="googleSignInBtn" class="ghost-btn">Sign in with Google</button>
+        <button id="emailSignOutBtn" class="ghost-btn hidden">Log out</button>
+      </div>
+    </header>
+
+    <main>
+      <section id="authSection" class="card auth-card">
+        <h2>Create your account / Sign in</h2>
+        <p>Use email/password or Google to enter Glenn Tube.</p>
+        <form id="authForm">
+          <label>Email
+            <input type="email" id="emailInput" placeholder="you@example.com" required />
+          </label>
+          <label>Password
+            <input type="password" id="passwordInput" placeholder="••••••••" minlength="6" required />
+          </label>
+          <button type="submit" class="primary-btn">Sign In / Create Account</button>
+        </form>
+      </section>
+
+      <section id="homeSection" class="hidden">
+        <div class="hero card">
+          <p class="tag">Welcome to the timeline</p>
+          <h2>The more sus the better.</h2>
+          <p id="welcomeText"></p>
+        </div>
+
+        <div class="grid">
+          <article class="card uploader-card">
+            <h3>Upload a video</h3>
+            <form id="uploadForm">
+              <input id="titleInput" type="text" maxlength="80" placeholder="Video title" required />
+              <textarea id="descriptionInput" maxlength="300" placeholder="Description"></textarea>
+              <input id="videoInput" type="file" accept="video/*" required />
+              <button class="primary-btn" type="submit">Upload</button>
+            </form>
+            <p id="uploadStatus" class="muted"></p>
+          </article>
+
+          <article class="card ai-card">
+            <h3>AI Assistant (Gemini API)</h3>
+            <p>Generate a title + concept for your next video.</p>
+            <form id="aiForm">
+              <input id="aiPrompt" type="text" placeholder="Example: spooky snack review" required />
+              <button id="aiBtn" class="ghost-btn" type="submit">Generate</button>
+            </form>
+            <p id="aiOutput" class="ai-output"></p>
+          </article>
+        </div>
+
+        <section class="card feed-card">
+          <h3>Video Feed</h3>
+          <p class="muted">Anyone can view these uploads.</p>
+          <div id="videoFeed" class="video-feed"></div>
+        </section>
+      </section>
+    </main>
+  </div>
+
+  <script type="module" src="app.js"></script>
+</body>
+</html>

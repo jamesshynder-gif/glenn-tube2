@@ -1,0 +1,67 @@
+:root {
+  --orange: #ff7a00;
+  --orange-soft: #ff9f45;
+  --black: #0f0f0f;
+  --black-soft: #1f1f1f;
+  --text: #f5f5f5;
+  --line: rgba(255, 122, 0, 0.35);
+}
+
+* { box-sizing: border-box; }
+
+body {
+  margin: 0;
+  font-family: Inter, system-ui, sans-serif;
+  background: radial-gradient(circle at top right, #2d1a00, var(--black));
+  color: var(--text);
+}
+
+.app-shell { max-width: 1080px; margin: 0 auto; padding: 1.2rem; }
+.topbar { display: flex; justify-content: space-between; align-items: center; margin-bottom: 1rem; gap: 1rem; }
+.topbar-actions { display: flex; gap: .5rem; flex-wrap: wrap; }
+h1 { margin: 0; color: var(--orange); }
+
+.card {
+  background: linear-gradient(155deg, rgba(255, 122, 0, 0.14), rgba(10, 10, 10, 0.95));
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 1rem;
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.28);
+}
+
+.auth-card { max-width: 460px; margin: 3rem auto 0; }
+.grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 1rem; margin: 1rem 0; }
+
+input, textarea {
+  width: 100%;
+  margin-top: .4rem;
+  margin-bottom: .7rem;
+  border: 1px solid #3f3f3f;
+  background: var(--black-soft);
+  color: var(--text);
+  border-radius: 10px;
+  padding: .72rem;
+}
+
+textarea { min-height: 80px; resize: vertical; }
+
+.primary-btn, .ghost-btn {
+  border-radius: 10px;
+  padding: .65rem .9rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.primary-btn { border: none; background: var(--orange); color: #111; }
+.ghost-btn { border: 1px solid var(--orange-soft); background: transparent; color: var(--orange-soft); }
+
+.tag { color: var(--orange-soft); text-transform: uppercase; font-size: .8rem; margin: 0; letter-spacing: .08em; }
+.ai-output { margin-top: .5rem; color: var(--orange-soft); white-space: pre-wrap; }
+.muted { color: #c7b9ab; font-size: .9rem; }
+.hidden { display: none; }
+
+.video-feed { display: grid; gap: 1rem; margin-top: .8rem; }
+.video-item { border: 1px solid #3e2a16; border-radius: 12px; padding: .8rem; background: rgba(0,0,0,.35); }
+.video-item video { width: 100%; border-radius: 8px; max-height: 420px; background: #000; }
+.video-meta { display: flex; justify-content: space-between; gap: .7rem; align-items: center; margin-top: .55rem; }
+.video-title { margin: .4rem 0 .2rem; }
+.small-btn { border: 1px solid var(--orange-soft); background: transparent; color: var(--orange-soft); border-radius: 8px; padding: .4rem .65rem; cursor: pointer; }
